@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Young Serif",'Outfit',Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1{
+    font-size: 2.2rem;
+}
+
+:root{
+    --font-title: "Young Serif",Arial, Helvetica, sans-serif;
+    --font-text: 'Outfit',Arial, Helvetica, sans-serif;
+    --color-white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 94%);
+}
+.container{
+    background-color: var(--rose-50);
+    padding: 5rem 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5rem;
+}
+.card-container{
+    padding: 2rem;
+    width: 45.5rem;
+    background: var(--color-white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.img-box{
+    aspect-ratio: var(--width) / var(--height);
+    overflow: hidden;
+}
+.img-cover{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero{
+    font-family: var(--font-title);
+    color: var(--stone-900);
+}
+.card-head .card-text{
+    line-height: 1.5rem;
+    margin-block-start: 1.5rem;
+}
+.card-text{
+    font-family: var(--font-text);
+    color: var(--stone-600);
+    font-weight: normal;
+}
+.prepare-box{
+    margin-block: 2rem 3rem;
+    background-color: var(--rose-50);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.card-head-title{
+    font-family: var(--font-text);
+    color: var(--rose-800);
+}
+span{
+    font-weight: bold;
+}
+.sub-title{
+    color: var(--brown-800);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.card-part{
+    padding-block: 1rem 3rem;
+}
+.card-part:not(:last-of-type){
+    border-block-end: 1px solid var(--stone-150);
+}
+ul{
+    list-style-position: outside;
+    padding-inline-start: 1.2rem;
+    font-family: var(--font-text);
+    color: var(--brown-800);
+    font-weight: bold;
+}
+.instc-list{
+    list-style:decimal;
+    line-height: 1.5; 
+}
+.instc-list .card-text{
+    margin: .5rem;
+}
+.nutrition-table-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);   
+}
+:is(.table-cat .card-text, .nutrition-text){
+    border-bottom: 1px solid var(--stone-100);
+}
+.nutrition-text{
+    color: var(--rose-800);
+}
+
+@media (max-width: 375px) {
+    h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  .container{
+    padding: 1.2rem;
+  }
+  
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .sub-title {
+    font-size: 1.4rem;
+  }
+  .container{
+    padding: 1.2rem;
+  }
+    .card-head .card-text{
+        margin-block-start: 0;
+    }
+    .card-container{
+        position: relative;
+        padding: 1.5rem;
+        overflow: hidden;
+    }
+  .img-box{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .hero{
+    margin-block-start: 42vw;
+  }
+  .img-cover{
+    border-radius: 0;
+  }
+}
